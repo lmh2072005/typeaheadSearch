@@ -18,7 +18,7 @@ html结构:
 调用：
 
     $('#autoComplete').typeaheadSearch({
-            source:[{"Name":"长沙市","NameEn":"Changsha","Id":417},{"Name":"衡阳市","NameEn":"Shaoyang","Id":418},{"Name":"株洲市","NameEn":"Zhuzhou","Id":419}],
+            source:[{"Name":"长沙市","NameEn":"Changsha","Id":1},{"Name":"衡阳市","NameEn":"Shaoyang","Id":2},{"Name":"株洲市","NameEn":"Zhuzhou","Id":3}],
             keyName:'Id',
             valName:'Name',
             hiddenName:'area',
