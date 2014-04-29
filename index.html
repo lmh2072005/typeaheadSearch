@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>typeaheadSearch</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <style type="text/css">
+        .input-append{ display: inline-block; *display: inline; *zoom:1;}
+        .typeaheadSearch button{ *height: 28px; *line-height: 28px;}
+        .typeaheadSearch .btn-group{ *left:-1px; *border: 1px solid #E6E6E6;}
+    </style>
+</head>
+<body>
+
+<div class="input-append typeaheadSearch">
+    <input class="span2" type="text" id="autoComplete" autocomplete="off">
+    <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+        </button>
+    </div>
+</div>
+
+
+
+<div class="input-append typeaheadSearch">
+    <input class="span2" type="text" id="test" autocomplete="off">
+    <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+        </button>
+    </div>
+</div>
+<div id="showID"></div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/typeaheadSearch.js"></script>
+<script>
+
+    var data = [{"Name":"长沙市","NameEn":"Changsha","Id":417},{"Name":"邵阳市","NameEn":"Shaoyang","Id":418},{"Name":"株洲市","NameEn":"Zhuzhou","Id":419},{"Name":"湘潭市","NameEn":"Xiangtan","Id":420},{"Name":"岳阳市","NameEn":"Yueyang","Id":421},{"Name":"常德市","NameEn":"Changde","Id":422},{"Name":"张家界市","NameEn":"Zhangjiajie","Id":423},{"Name":"益阳市","NameEn":"Yiyang","Id":424},{"Name":"郴州市","NameEn":"Chenzhou","Id":425},{"Name":"永州市","NameEn":"Yongzhou","Id":426},{"Name":"娄底市","NameEn":"Loudi","Id":427},{"Name":"湘西州","NameEn":"Xiangxi","Id":428},{"Name":"怀化市","NameEn":"Huaihua","Id":429},{"Name":"衡阳市","NameEn":"Hengyang","Id":430}];
+    var data1 = ['a','aa','abc'];
+
+    $(function(){
+        $('#test').typeaheadSearch({
+            source:data,
+            keyName:'Id',
+            valName:'Name',
+            hiddenName:'area',
+            change : function(ui){ $('#showID').html(ui.getValue());}
+        });
+
+        $('#autoComplete').typeaheadSearch({
+            source:data1,
+            readOnly:true
+        });
+    })
+</script>
+</body>
+</html>
