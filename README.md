@@ -22,7 +22,7 @@ html结构:
             keyName:'Id',
             valName:'Name',
             hiddenName:'area',
-            change : function(ui){ $('#showID').html(ui.getValue());}
+            change : function(ui){ console.log(ui.getValue());}
         });
         
         
