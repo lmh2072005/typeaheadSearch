@@ -1,7 +1,9 @@
 typeaheadSearch
 ===============
 js基于bootstrap typeahead插件 ，带下拉框和输入过滤
+
 html 使用bootstrap form 基本元素样式
+
 html结构:
 
     <div class="input-append typeaheadSearch">
