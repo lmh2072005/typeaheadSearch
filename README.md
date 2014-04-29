@@ -13,4 +13,15 @@ html结构:
     </div>
 </div>
 
+调用：
+
+    $('#autoComplete').typeaheadSearch({
+            source:[{"Name":"长沙市","NameEn":"Changsha","Id":417},{"Name":"衡阳市","NameEn":"Shaoyang","Id":418},{"Name":"株洲市","NameEn":"Zhuzhou","Id":419}],
+            keyName:'Id',
+            valName:'Name',
+            hiddenName:'area',
+            change : function(ui){ $('#showID').html(ui.getValue());}
+        });
+        
+        
 TypeaheadSearch
