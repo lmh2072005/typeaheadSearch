@@ -7,13 +7,13 @@ html 使用bootstrap form 基本元素样式
 html结构:
 
     <div class="input-append typeaheadSearch">
-    <input class="span2" type="text" id="autoComplete" autocomplete="off">
-    <div class="btn-group">
-        <button class="btn dropdown-toggle" data-toggle="dropdown">
-            <span class="caret"></span>
-        </button>
+        <input class="span2" type="text" id="autoComplete" autocomplete="off">
+        <div class="btn-group">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+        </div>
     </div>
-</div>
 
 调用：
 
